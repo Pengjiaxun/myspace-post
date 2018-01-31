@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+@include font-face('icomoon', 'assets/fonts/icomoon');
+
+[class^="icon-svg-"]{
+	color: nth($icon-colors, 1);
+	@extend %inline-block;
+	font-size: 0.22rem;
+	font-style: normal;
+	font-family: 'icomoon';
+	position: relative;
+	line-height: 1;
+}
+
+//完成
+.icon-svg-check{
+	&:before{
+		content:'\e876';
+	}
+}
+
+//返回
+.icon-svg-back{
+	&:before{
+		content:'\e901';
+	}
+}
+
+//分类
+.icon-svg-classify{
+	&:before{
+		content:'\e902';
+	}
+}
+
+//前进
+.icon-svg-goto{
+	&:before{
+		content:'\e903';
+	}
+}
+
+//江湖
+.icon-svg-throng{
+	color: #75a6e8;
+	&:before{
+		content:'\e904';
+	}
+}
+
+//首页
+.icon-svg-home{
+	&:before{
+		content:'\e913';
+	}
+	&.active{
+		&:before{
+			content:'\e90e';
+		}
+	}
+}
+
+//跨界
+.icon-svg-transboundary{
+	&:before{
+		content:'\e910';
+	}
+	&.active{
+		&:before{
+			content:'\e905';
+		}
+	}
+}
+//钱
+.icon-svg-money{
+	&:before{
+		content:'\e921';
+	}
+	&.active{
+		&:before{
+			content:'\e914';
+		}
+	}
+}
+
+//订单
+.icon-svg-order{
+	&:before{
+		content:'\e907';
+	}
+	&.active{
+		&:before{
+			content:'\e900';
+		}
+	}
+}
+
+//我的
+.icon-svg-me{
+	&:before{
+		content:'\e912';
+	}
+	&.active{
+		&:before{
+			content:'\e90b';
+		}
+	}
+}
+
+
+//地址
+.icon-svg-adress{
+	color: #75a6e8;
+	&:before{
+		content:'\e906';
+	}
+}
+
+//搜索
+.icon-svg-search{
+	&:before{
+		content:'\e908';
+	}
+}
+
+//提现
+.icon-svg-get-money{
+	color: #fbd193;
+	&:before{
+		content:'\e909';
+	}
+}
+
+//皇冠
+.icon-svg-crown{
+	&:before{
+		content:'\e911';
+	}
+}
+
+//签名
+.icon-svg-sign{
+	color: #ff8868;
+	&:before{
+		content:'\e90a';
+	}
+}
+
+//记录
+.icon-svg-record{
+	color: #ff8868;
+	&:before{
+		content:'\e90d';
+	}
+}
+
+//设置
+.icon-svg-setting{
+	color: #75a6e8;
+	&:before{
+		content:'\e90c';
+	}
+}
+
+//首页
+.icon-svg-down-arrow{
+	&:before{
+		content:'\e90f';
+	}
+}
+
+.icon-svg-add{
+	&:before{
+		content:'\e145';
+	}
+}
+
+.icon-svg-close{
+	&:before{
+		content:'\e5cd';
+	}
+}
+
+//checkbox
+.icon-svg-checkbox{
+	color: nth($text-colors, 4);
+	&:before{
+		content:'\e916';
+	}
+}
+
+//充值
+.icon-svg-recharge{
+	color: #fbd193;
+	&:before{
+		content:'\e917';
+	}
+}
+
+//卡
+.icon-svg-card{
+	color: #f26d5f;
+	&:before{
+		content:'\e919';
+	}
+}
+
+//任务单
+.icon-svg-task-order{
+	color: #75a6e8;
+	&:before{
+		content:'\e91a';
+	}
+}
+
+
+//荐
+.icon-svg-recommend{
+	color: #fbd193;
+	&:before{
+		content:'\e91b';
+	}
+}
+
+
+//定位
+.icon-svg-location{
+	color: #f26d5f;
+	&:before{
+		content:'\e918';
+	}
+}
+
+//扫码
+.icon-svg-scan{
+	color: #f26d5f;
+	&:before{
+		content:'\e920';
+	}
+}
+
+//任务
+.icon-svg-task{
+	&:before{
+		content:'\e91f';
+	}
+}
+

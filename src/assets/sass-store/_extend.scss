@@ -1,0 +1,118 @@
+@charset 'utf-8';
+
+//清除浮动
+%clearfix{
+    &:before,
+    &:after{
+        display: table;
+        content: '';
+    }
+    &:after{
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+/**
+ * 浮动布局
+ */
+%fl{
+    float: left;
+}
+%fr{
+    float: right;
+}
+%fn{
+    float: none;
+}
+
+/**
+ * 定位
+ */
+%pos-r{
+    position: relative;
+}
+%pos-a{
+    position: absolute;
+}
+%pos-f{
+    position: fixed;
+}
+
+%ta-l{
+    text-align: left;
+}
+%ta-c{
+    text-align: center;
+}
+%ta-r{
+    text-align: right;
+}
+
+%scroll-touch{
+    -webkit-overflow-scrolling:touch;
+}
+
+//隐藏滚动条
+%hide-scrollbar{
+    &::-webkit-scrollbar{
+        height: 0;
+        width: 0;
+        display: none;
+    }
+}
+
+%inline-block{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+//图片等比例缩放
+%img-cover{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+//垂直居中
+%vertical-center{
+    display: flex;
+    align-items:center;
+}
+
+//垂直水平居中
+%vertical-align{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+//单行溢出省略号
+%text-eps{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+%content{
+    content: '';
+    position: absolute;
+    // height: 100%;
+    // width: 100%;
+}
+
+%center-block{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//clear inline-block padding
+// %clear-inline-block-padding{
+//     font-size: 0;
+//     letter-spacing: -.41rem;
+// }
+
+// @mixin inline-block-recover($size){
+//     font-size: $size;
+//     letter-spacing: normal;
+// }

@@ -1,0 +1,96 @@
+// @charset "utf-8";
+// @import "../../sass-store/_base.scss";
+
+// /**********加载动画**********/
+// @include keyframes(loading){
+// 	0%{
+// 		transform:rotate(0deg) translateZ(0);
+// 	}
+// 	100% {
+// 		transform:rotate(360deg) translateZ(0);
+// 	}
+// }
+
+// /**********场景上滑按钮动画**********/
+// @include keyframes(guideTop){
+//     0% {
+//         transform: translate3d(0, 0.15rem, 0);
+//         opacity: 0
+//     }
+
+//     60% {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 1
+//     }
+
+//     100% {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 0
+//     }
+// }
+
+// /**********场景上编辑按钮动画**********/
+// @include keyframes(sceneEditBtn){
+//     0% {
+//         transform: translate3d(0, -0.05rem, 0);
+//     }
+
+//     50% {
+//         transform: translate3d(0, 0, 0);
+//     }
+
+//     100% {
+//         transform: translate3d(0, -0.05rem, 0);
+//     }
+// }
+
+// /**********场景音乐按钮动画**********/
+// @include keyframes(musicAnimate){
+//     0% {
+//         transform: rotate(0);
+//     }
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
+
+// @include keyframes(rightToLeftIn){
+//     0% {
+//         transform: translate3d(100%, 0, 0);
+//         opacity: 0.9;
+//     }
+//     100% {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 1;
+//     }
+// }
+// @include keyframes(rightToLeftOut){
+//     0% {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform: translate3d(-20%, 0, 0);
+//         opacity: 0.9;
+//     }
+// }
+// @include keyframes(leftToRightIn){
+//     0% {
+//         transform: translate3d(-100%, 0, 0);
+//         opacity: 0.9;
+//     }
+//     100% {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 1;
+//     }
+// }
+// @include keyframes(leftToRightOut){
+//     0% {
+//         transform: translate3d(0, 0, 0);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform: translate3d(20%, 0, 0);
+//         opacity: 0.9;
+//     }
+// }

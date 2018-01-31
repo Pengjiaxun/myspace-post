@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.placeholder{
+	color:nth($text-colors,4);
+}
+
+/**********浮动**********/
+//清除浮动
+.clearfix{
+	@extend %clearfix;
+}
+
+.fl{
+	@extend %fl;
+}
+
+.fr{
+	@extend %fr;
+}
+
+.text-eps{
+	@extend %text-eps;
+}
+
+.pub-blue{
+	color: #3B9BFF!important;
+}
+
+.mt5{
+	margin-top: 0.05rem!important;
+}
+.mt10{
+	margin-top: 0.1rem!important;
+}
+.mt15{
+	margin-top: 0.15rem!important;
+}
+.mt30{
+	margin-top: 0.3rem!important;
+}
+.mr5{
+	margin-right: 0.05rem!important;
+}
+.mr10{
+	margin-right: 0.1rem!important;
+}
+.mb5{
+	margin-bottom: 0.05rem!important;
+}
+.mb10{
+	margin-bottom: 0.1rem!important;
+}
+.mb15{
+	margin-bottom: 0.15rem!important;
+}
+.mb25{
+	margin-bottom: 0.25rem!important;
+}
+.ml10{
+	margin-left: 0.1rem!important;
+}
+.ml15{
+	margin-left: 0.15rem!important;
+}
+
+/**********隐藏元素**********/
+.hide{
+	display: none!important;
+}
+.hidden{
+	visibility: hidden!important;
+}
+.overflow-hidden{
+	overflow: hidden!important;
+}
+
+.pos-r{
+	position: relative!important;
+}
+
+
+/**********文本居中方式**********/
+//居左
+.ta-l{
+	@extend %ta-l;
+}
+//居右
+.ta-c{
+	@extend %ta-c;
+}
+//居右
+.ta-r{
+	@extend %ta-r;
+}
+
+.has-active{
+	&:active{
+		background-color: rgba(0,0,0,.05)!important;
+	}
+}

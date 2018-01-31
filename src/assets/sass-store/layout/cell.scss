@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+// .ui-cell-list{
+// 	&.has-last-child-no-border{
+// 		.item{
+// 			&:last-child{
+// 				.item-inner{
+// 					&::after{
+// 						display: none;
+// 					}
+// 				}
+// 			}			
+// 		}
+// 	}
+// 	.item{
+// 		background-color: #fff;
+// 		color: nth($text-colors,2);
+// 		display: flex;
+// 		justify-content: space-between;
+// 		align-items: center;
+// 		@extend %pos-r;
+// 		&.has-textarea{
+// 			.item-inner{
+// 				flex-direction: column;
+// 			    align-items: baseline;
+// 			}
+// 			.control{
+// 				width: 100%;
+// 			    margin-top: .1rem;
+// 			}
+// 		}
+// 	}		
+// 	.item-media{
+// 		display: flex;
+// 		flex-shrink: 0;
+// 		padding-left: .1rem;
+// 		[class^="icon-svg-"]{
+// 			font-size: .24rem;
+// 		}
+// 		.icon-svg{
+// 			@extend %inline-block;
+// 			@include hw(.24rem);
+// 			border-radius: 50%;
+// 			background-color: nth($theme-colors, 1);
+// 		}
+// 		.item-icon{
+// 			@include hw(.3rem);
+// 		}
+// 	}
+// 	.item-inner{
+// 		flex: 1;
+// 		min-height: .5rem;
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		padding: .1rem 0;
+// 		@extend %pos-r;
+// 		padding-right: .1rem;
+// 		&::after{
+// 			@include thin-border(rgba(0, 0, 0, .1), down);
+// 		}
+// 	}
+// 	.field,
+// 	.item-after{
+// 		display: flex;
+// 		flex-shrink: 0;
+// 	}
+// 	.field{
+// 		color: nth($text-colors,2);
+// 		@extend %inline-block;		
+// 		@include line-vertical-middle(0.3rem);
+// 		padding-right: 0.1rem;
+// 	}
+// 	.item-after{
+// 		padding-left: .1rem;
+// 	}
+// 	.control{
+// 		flex:1;
+// 		min-height: 0.3rem;
+// 	}
+// 	.form-text{
+// 		color: nth($text-colors, 3);
+// 		@include line-vertical-middle(0.3rem);
+// 		&[disabled]{
+// 			background-color:transparent;
+// 		}
+// 	}
+// 	.form-radio,
+// 	.form-checkbox{
+// 		position: absolute;
+//   		left: -9999em;
+// 	}
+// 	.form-radio,
+// 	.form-checkbox{
+// 		& + .icon-svg-check{
+// 			color: transparent;
+// 		}
+// 		&:checked + .icon-svg-check{
+// 			color: nth($theme-colors, 1);
+// 		}
+// 		& + .icon-svg-checkbox{
+// 			color: nth($text-colors, 4);
+// 			&:before{
+// 				content:'\e916';
+// 			}
+// 		}
+// 		&:checked + .icon-svg-checkbox{
+// 			color: nth($theme-colors, 1);
+// 			&:before{
+// 				content:'\e91d';
+// 			}
+// 		}
+// 	}
+// 	.form-file{
+// 		@extend %pos-a;
+// 		left: 0;
+// 		top: 0;
+// 		@include hw(100%);
+// 		z-index: 10;
+// 		opacity: 0;
+// 	}
+// 	.form-textarea-wrap{
+// 		padding: .08rem;
+// 		@extend %pos-r;
+// 		&::before{
+// 			@include thin-border(rgba(0, 0, 0, .1), all);
+// 		}
+// 	}
+// 	.form-textarea{
+// 		height: 1.2rem;
+// 		@extend %pos-r;
+// 		z-index: 10;			
+// 	}
+// 	.form-word{
+// 		color: nth($text-colors, 3);
+// 		@include line-vertical-middle(0.3rem);		
+// 	}
+// 	.after-text{
+// 		color: nth($text-colors, 3);
+// 		margin-left: .1rem;
+// 	}
+// 	.icon-svg-goto{
+// 		color: #a3a3a3;
+// 	}
+// 	.form-switch{
+// 		position: relative;
+// 		width: 0.52rem;
+// 		height: 0.32rem;
+// 		border: 1px solid rgba(0, 0, 0, .1);
+// 		border-radius: 0.16rem;
+// 		&::before,
+// 		&::after{
+// 			@extend %content;
+// 			transition:transform .3s,-webkit-transform .3s;
+// 		}
+// 		&::before{
+// 			width: .5rem;
+// 			height: .3rem;
+// 			border-radius: .15rem;
+// 			background-color: #eee;
+// 		}
+// 		&::after{
+// 			@include hw(.3rem);
+// 			border-radius: 50%;
+// 			background-color: $white;
+// 			box-shadow: 0 .01rem .03rem rgba(0, 0, 0, 0.4);
+// 		}
+// 		&:checked{
+//   			background-color: nth($theme-colors, 1);
+// 			border-color: nth($theme-colors, 1);
+// 			&::before{
+// 				transform:scale(0);
+// 			}
+// 			&::after{
+// 				transform:translateX(.2rem);
+// 			}
+// 		}
+// 	}
+// 	.form-upload{
+// 		// margin: 0 -.1rem -.1rem 0;
+// 		// overflow: hidden;
+// 		@extend %clearfix;
+// 	}
+// 	.upload-list{
+// 	}
+// 	.upload-item{
+// 		background-color: #eee;
+// 		background-position: center center;
+// 		background-repeat: no-repeat;
+//     	background-size: cover;
+//     	@extend %pos-r;
+// 	}
+// 	.upload-item,	
+// 	.upload-btn{
+// 		@extend %fl;
+// 		@include hw(.8rem);
+// 		margin: 0 .1rem .1rem 0;
+// 	}
+// 	.upload-btn{
+// 		border: .01rem dashed rgba(0, 0, 0, .1);
+// 		@extend %pos-r;
+// 		@extend %vertical-align;
+// 	}
+
+// 	.upload-del-btn{
+// 		background-color: #ddd;
+// 		border-radius: 50%;
+// 		@extend %pos-a;
+// 		@include hw(.2rem);
+// 		@extend %vertical-align;
+// 		right: -.06rem;
+// 		top: -.06rem;
+// 		[class^="icon-svg-"]{
+// 			color: nth($text-colors, 3);
+// 			font-size: .12rem;
+// 		}
+// 	}
+
+// }

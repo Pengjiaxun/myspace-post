@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+.ui-btn{
+	$radius : 0.04rem;
+	background-color: transparent;
+	border-radius: $radius;
+	cursor: pointer;
+	@extend %inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	&.btn-block{
+		width: 100%;
+	}
+	&.btn-sm{
+		font-size: 0.12rem;
+		padding: 0.06rem 0.08rem;
+	}
+	&.btn-normal{
+		font-size: 0.14rem;
+		padding: 0.12rem 0.12rem;
+	}
+	&.btn-lg{
+		font-size: 0.16rem;
+		padding: 0.13rem 0.2rem;
+	}
+	&.disabled{
+		background-color: $disabled-color!important;
+		color: nth($text-colors,4)!important;
+		cursor: not-allowed;
+		// pointer-events: none;
+	}
+	&.btn-default{
+		color: nth($theme-colors,1);
+		background: linear-gradient(to bottom, #fff , #f5f5f5);
+		position: relative;
+		&::before{
+			border-radius: $radius*2;
+			@include thin-border(rgba(0,0,0,.15),all);
+		}
+	}
+	&.btn-theme{
+		background-color: nth($theme-colors, 1);
+		color: #fff;
+	}
+	&.btn-primary{
+		background-color: nth($theme-colors, 2);
+		color: #fff;
+	}
+	&.btn-success{
+		background-color: nth($green-colors,1);
+		color: #fff;
+	}
+	&.btn-danger{
+		background-color: nth($red-colors,1);
+		color: #fff;
+	}
+	&.btn-warning{
+		background-color: nth($orange-colors,1);
+		color: #fff;
+	}
+	&.btn-border-theme{
+		color: nth($theme-colors, 2);
+		position: relative;
+		&::after{
+			border-radius:$radius*2;
+			@include thin-border(nth($theme-colors, 2), all);
+		}
+	}
+	&.btn-border-blue{
+		$color: #3b9bff;
+		color: $color;
+		position: relative;
+		&::after{
+			border-radius: $radius * 2;
+			@include thin-border($color, all);
+		}
+	}
+}

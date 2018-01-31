@@ -1,0 +1,235 @@
+@charset 'utf-8';
+
+@mixin thin-border($color, $position){
+    content: '';
+    position: absolute;
+    z-index: 5;
+    border-style: solid;
+    border-color: $color;
+    box-sizing: border-box;
+    transform: scale(.5);
+
+    @if($position == all){
+        top: 0;
+        left: 0;
+        height: 200%;
+        width: 200%;
+        border-width: .01rem;
+        transform-origin: 0 0;
+    }@else if($position == up){
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: .01rem;
+        border-width: .01rem 0 0 0;
+        transform-origin: 0 0;
+    }@else if($position == right){
+        top: 0;
+        right: 0;
+        width: .01rem;
+        height: 200%;
+        border-width: 0 .01rem 0 0;
+        transform-origin: right top;
+    }@else if($position == down){
+        bottom: 0;
+        left: 0;
+        width: 200%;
+        height: .01rem;
+        border-width: 0 0 .01rem 0;
+        transform-origin: 0 bottom;
+    }@else if($position == left){
+        top: 0;
+        left: 0;
+        width: .01rem;
+        height: 200%;
+        border-width: 0 0 0 .01rem;
+        transform-origin: 0 0;
+    }
+}
+
+@mixin opacity($v: 50){
+    opacity: $v / 100;
+    @if $ie8
+    {
+        filter: alpha(opacity = $v);
+    }
+}
+
+@mixin disabled($bgColor: #e6e6e6, $textColor:#ababab){
+    cursor: not-allowed !important;
+    color: $textColor !important;
+    background-color: $bgColor !important;
+}
+
+@mixin hw($v){
+    width: $v;
+    height: $v;
+}
+
+@mixin min-hw($v){
+    min-width: $v;
+    min-height: $v;
+}
+
+@mixin max-hw($v){
+    max-width: $v;
+    max-height: $v;
+}
+
+@mixin min-height($v){
+    height: auto !important;
+    min-height: $v;
+}
+
+//单行垂直居中
+@mixin line-vertical-middle($v){
+    line-height: $v;
+    height: $v;
+}
+
+//多选溢出省略号
+@mixin multi-line-eps($v){
+    display: -webkit-box;
+    display: -moz-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $v;
+}
+
+//图标字体
+//@mixin font-face($fontFamily, $filePath, $weight: normal, $style: normal ){
+//    @font-face{
+//        font-family: $fontFamily;
+//        font-weight: $weight;
+//        font-style: $style;
+//
+//        src: url('#{$filePath}.eot');
+//        src: url('#{$filePath}.eot?#iefix')      format('eot'),
+//        url('#{$filePath}.svg##{$fontFamily}')   format('svg'),
+//        url('#{$filePath}.woff')                 format('woff'),
+//        url('#{$filePath}.ttf')                  format('truetype');
+//    }
+//}
+//
+////三角
+//@mixin triangle ($size: 30px,$color:#000,$bgColor:#111,$direction:up,$inner:false,$transparent:false){
+//    content: '';
+//    height: 0;
+//    width: 0;
+//    position: absolute;
+//    @if ($direction == up) or ($direction == right) or ($direction == down) or ($direction == left)
+//    {
+//        border: ($size / 2) solid transparent;
+//        @if $direction == up
+//        {
+//            @if $inner
+//            {
+//                top: 0;
+//
+//                border-color: $bgColor transparent transparent transparent;
+//                border-bottom-width: 0;
+//            } @else
+//            {
+//                border-color: transparent transparent $color transparent;
+//                border-top-width: 0;
+//            }
+//            @if $transparent
+//            {
+//                border-color: transparent $color $color $color;
+//                border-top-width: $size / 2;
+//                border-bottom-width: 0;
+//            }
+//        }
+//        @else if $direction == right
+//        {
+//            @if $inner
+//            {
+//                right: 0;
+//
+//                border-color: transparent $bgColor transparent transparent;
+//                border-left-width: 0;
+//            } @else
+//            {
+//                border-color: transparent transparent transparent $color;
+//                border-right-width: 0;
+//            }
+//            @if $transparent
+//            {
+//                border-color: $color transparent $color $color;
+//                border-right-width: $size / 2;
+//                border-left-width: 0;
+//            }
+//        }
+//        @else if $direction == down
+//        {
+//            @if $inner
+//            {
+//                bottom: 0;
+//
+//                border-color: transparent  transparent $bgColor transparent;
+//                border-top-width: 0;
+//            } @else
+//            {
+//                border-color: $color transparent transparent transparent;
+//                border-bottom-width: 0;
+//            }
+//            @if $transparent
+//            {
+//                border-color: $color $color transparent $color;
+//                border-top-width: 0;
+//                border-bottom-width: $size / 2;
+//            }
+//        }
+//        @else if $direction == left
+//        {
+//            @if $inner
+//            {
+//                left: 0;
+//
+//                border-color: transparent transparent transparent $bgColor;
+//                border-right-width: 0;
+//            } @else
+//            {
+//                border-color: transparent $color transparent transparent;
+//                border-left-width: 0;
+//            }
+//            @if $transparent
+//            {
+//                border-color: $color $color $color transparent;
+//                border-right-width: 0;
+//                border-left-width: $size / 2;
+//            }
+//        }
+//    }
+//    @else if ($direction == up-right) or ($direction == up-left)
+//    {
+//        border-top: $size solid $color;
+//        @if $direction == up-right
+//        {
+//            left: 0;
+//
+//            border-left: $size solid transparent;
+//        } @else if $direction == up-left
+//        {
+//            right: 0;
+//
+//            border-right: $size solid transparent;
+//        }
+//    }
+//    @else if ($direction == down-right) or ($direction == down-left)    {
+//        border-bottom: $size solid $color;
+//        @if $direction == down-right
+//        {
+//            left: 0;
+//
+//            border-left: $size solid transparent;
+//        } @else if $direction == down-left
+//        {
+//            right: 0;
+//
+//            border-right: $size solid transparent;
+//        }
+//    }
+//}

@@ -1,0 +1,20 @@
+@charset 'utf-8';
+@import '../../sass-store/_base.scss';
+
+.ui-page-group,
+.ui-page{
+	height: 100%;
+}
+
+.ui-page{
+	display: flex;
+	flex-direction: column;
+}
+
+.ui-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

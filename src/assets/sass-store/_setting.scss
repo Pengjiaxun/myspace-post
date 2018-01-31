@@ -1,0 +1,34 @@
+@charset 'utf-8';
+
+//字体
+$fontSize:        28px !default;
+$fontLineHeight:  1.5 !default;
+$fontFamily:      "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif !default;
+
+//主题色
+$theme-colors : #87c129 #c3e094;
+
+//白色
+$white: #fff;
+
+$border-colors: #ddd #eee;
+$text-colors: #000 #333 #666 #999 #ccc;
+
+$icon-colors: #666 #999 #ccc;
+$disabled-color : #eee;
+
+//$head-bg: #373b3e;
+
+//背景色
+$body-bg: #222;
+$active-bg : rgba(0,0,0,.05);
+
+$bg-colors: #eee #ddd #f8f8f8 #fff;
+//$red-colors: #e52f3c;
+//$orange-colors: #f40;
+//$green-colors: #47b48a;
+//
+//$content-zindex: 800;
+//$page-zindex: 1000;
+//$popBox-zindex: 10000;
+//$dialog-zindex: 12000;

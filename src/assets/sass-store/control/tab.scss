@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.ui-tab{
+	&.flex-tab{
+		display: flex;
+		align-items: center;
+	}
+	&.border-tab{
+		background-color:#fff;
+		border-bottom:1px solid nth($theme-colors,1);
+		height: 0.44rem;
+		@extend %vertical-align;
+		.tab-item{
+			border-bottom:2px solid transparent;
+			height: 100%;
+			flex:1;
+			@extend %vertical-align;
+			&.curr{
+				border-color: nth($theme-colors,1);
+			}
+		}
+	}
+	.tab-item{
+		flex:1;
+		text-align: center;
+		padding: 0 .1rem;
+		@extend %text-eps;
+	}
+}
